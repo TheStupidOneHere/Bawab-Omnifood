@@ -1,0 +1,644 @@
+/* 
+-- 01 TYPOGRAPHY --
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+FONT WEIGHTS:
+Normal: 400
+Semi-Bold: 500
+Bold: 600
+
+-- 02 COLORS --
+
+MAIN: #e67e22
+TINTS: #fdf2e9 , #f8d8bd
+SHADES: #cf711f, #2e1907
+ACCENTS:
+GRAYS:
+#333
+#555
+
+FONT SIZES USED
+Large (headings): 62px (6.2rem)
+Normal (paragraph): 20px (2rem)
+Small (Links): 18px (1.8rem)
+
+
+-- 03 IMAGES --
+
+-- 07 WHITESPACE -- 
+ SPACING SYSTEM (px)
+ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+-- BORDER RADIUS --
+Small: 9px
+Medium: 11px
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+/******************************/
+/* HEADER COMPONENT STYLES */
+/******************************/
+
+.header {
+  padding: 0 6.4rem;
+
+  background-color: #fdf2e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+}
+
+.logo {
+  height: 3.2rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 500;
+
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  background-color: #e67e22;
+  color: #fff;
+  border-radius: 9px;
+
+  transition: all 0.3s;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/******************************/
+/* HERO COMPONENT STYLES */
+/******************************/
+
+.section-hero {
+  background-color: #fdf2e9;
+
+  padding: 6.2rem 0 9.8rem 0;
+  /* height: 100vh; */
+}
+
+.hero {
+  padding: 0 2.4rem;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 6.4rem; */
+  max-width: 145rem;
+}
+
+.hero-description {
+  line-height: 1.7;
+  font-size: 2rem;
+  margin-bottom: 6.4rem;
+  font-weight: 400;
+}
+
+.hero-img {
+  max-width: 100%;
+}
+
+.customer-imgs {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.customer-img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.meals-delivered {
+  font-size: 2rem;
+  margin-left: 3.2rem;
+}
+
+.meals-delivered span {
+  font-weight: 600;
+  color: #cf711f;
+}
+
+/******************************/
+/* HOW IT WORKS SECTION */
+/******************************/
+.section-how div:first-child {
+  padding: 9.8rem 3.2rem;
+  max-width: 130.5rem;
+}
+
+.section-heading {
+  display: inline-block;
+  font-size: 1.8rem;
+  letter-spacing: 1.1px;
+  color: #cf711f;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.how-img {
+  max-width: 40%;
+  transition: all 0.3s;
+}
+
+.how-img-box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.how-number {
+  font-weight: 600;
+  font-size: 6.4rem;
+  color: #ccc;
+}
+
+.how-description {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.how-img-box::before,
+.how-img-box::after {
+  content: "";
+  background-color: #fdf2e9;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.how-img-box::before {
+  width: 75%;
+  /*Padding on the bottom is 75% of the WIDTH of the parent element*/
+  padding-bottom: 75%;
+  z-index: -2;
+}
+
+.how-img-box::after {
+  background-color: #f8d8bd;
+  width: 55%;
+  padding-bottom: 55%;
+  z-index: -1;
+}
+
+.how-img-box:hover .how-img {
+  transform: translate(0, -1rem);
+}
+
+/******************************/
+/* FEATURED IN SECTION */
+/******************************/
+.section-featured {
+  max-width: 130.5rem;
+  padding-top: 9.8rem;
+}
+
+.featured-heading {
+  color: #4d4d4d;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.18rem;
+}
+
+.featured-logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.featured-logo {
+  filter: brightness(0);
+  opacity: 70%;
+  height: 3.2rem;
+}
+
+/******************************/
+/* MEALS SECTION */
+/******************************/
+
+.meal-cards {
+  max-width: 130.5rem;
+}
+
+.meal-headings {
+  text-align: center;
+}
+
+.meal-card {
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+}
+
+.meal-card:hover {
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.05);
+  transform: translate(0, -1rem);
+}
+
+.meal-text-box {
+  padding: 3.2rem 6.4rem 4.8rem 6.4rem;
+}
+
+.meal-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1.6rem;
+}
+
+.meal-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+  /* margin-bottom: 0.8rem; */
+}
+
+.meal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  font-size: 1.8rem;
+}
+
+.meal-list li {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.meal-icon {
+  font-size: 2.4rem;
+  color: #cf711f;
+}
+
+.meal-text-box .tag {
+  margin-bottom: 1.2rem;
+}
+
+.meal-list strong {
+  font-weight: 500;
+}
+
+/******************************/
+/* TESTIMONIAL + GALLERY SECTION */
+/******************************/
+
+.section-testimonials {
+  grid-template-columns: 60fr 40fr;
+  gap: 9.6rem;
+  align-items: center;
+  padding: 1.6rem;
+  background-color: #fdf2e9;
+}
+
+.testimonials-box {
+  padding: 0 3.2rem;
+}
+
+.testimonials {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4.8rem;
+  row-gap: 3.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-author {
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.08);
+}
+
+.gallery-img-box {
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.gallery-img-box:hover {
+  border-radius: 9px;
+}
+
+/******************************/
+/* PRICING SECTION */
+/******************************/
+
+.pricing-box {
+  max-width: 130.5rem;
+  padding: 12.8rem 0 8.6rem;
+}
+
+.plan-name {
+  color: #333;
+}
+
+.plan-price {
+  font-size: 4.4rem;
+  font-weight: 600;
+  color: #2e1907;
+  margin-bottom: 0.8rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+}
+
+.plan-card {
+  padding: 4.8rem 6.4rem;
+  border-radius: 11px;
+  background-color: #fdf2e9;
+  width: 75%;
+  box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:nth-child(1) {
+  justify-self: end;
+  background-color: #e9ecef;
+}
+
+.plan-card:nth-child(2)::after {
+  position: absolute;
+
+  content: "Best Value";
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 0.07rem;
+  font-weight: 500;
+  background-color: #ffd43b;
+  transform: rotate(45deg);
+  top: 4.2rem;
+  right: -4.9rem;
+  box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.05);
+
+  padding: 0.4rem 5.2rem;
+}
+
+.plan-card aside {
+  font-size: 1.6rem;
+  color: #666;
+}
+
+.section-pricing aside {
+  font-size: 1.6rem;
+  color: #666;
+}
+
+/******************************/
+/* FEATURES SECTION */
+/******************************/
+
+.features-box {
+  max-width: 130.5rem;
+}
+
+.feature-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #cf711f;
+  padding: 1.2rem;
+  background-color: #fdf2e9;
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+}
+
+.feature-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/******************************/
+/* CTA SECTION */
+/******************************/
+
+.section-cta {
+  padding: 12.8rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1.1fr;
+
+  width: 65%;
+  /* height: 50rem; */
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #eb984e, #cf711f);
+  overflow: hidden;
+  color: #2e1907;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(230, 125, 34, 0.3),
+      rgba(207, 113, 31, 0.3)
+    ),
+    url(../img/eating.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 9.6rem;
+}
+
+.cta .heading-tertiary {
+  color: #2e1907;
+  margin-bottom: 1.2rem;
+  font-size: 4.4rem;
+}
+
+.cta-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+
+.cta-label {
+  display: block;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.cta-input,
+.cta .btn {
+  font-size: 2rem;
+  padding: 1.6rem 2.4rem;
+  font-family: inherit;
+  border: none;
+}
+
+.cta-input {
+  width: 100%;
+  border-radius: 9px;
+  background-color: #fff;
+}
+
+.cta .btn {
+  align-self: end;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+#input-where {
+  appearance: none;
+  background-image: url(../img/caret-down-outline.svg);
+  background-repeat: no-repeat;
+  background-size: 2.4rem;
+  background-position: 95%, 0;
+}
+
+/******************************/
+/* FOOTER STYLE SECTION */
+/******************************/
+
+.footer {
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.footer-box {
+  max-width: 130.5rem;
+  padding: 12.8rem 0;
+  color: #666;
+}
+
+.footer-list-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+  color: #333;
+}
+
+.social-links {
+  padding: 0 2.4rem;
+}
+
+.footer-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: inherit;
+}
+
+.footer-links,
+.footer .social-links {
+  display: flex;
+  list-style: none;
+  gap: 2.4rem;
+}
+
+.footer-links {
+  flex-direction: column;
+}
+
+.footer-logo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.copyright {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+.address {
+  font-size: 1.6rem;
+  font-style: normal;
+  flex-direction: column;
+}
+
+.address .orange-link {
+  font-size: 1.6rem;
+  display: inline-block;
+}
