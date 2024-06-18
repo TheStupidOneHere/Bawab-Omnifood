@@ -54,7 +54,6 @@ USE REM AND EM
 
   html {
     font-size: 37.5%;
-    position: relative;
   }
   .grid {
     column-gap: 4.8rem;
@@ -102,14 +101,6 @@ USE REM AND EM
   }
 
   .main-nav-list {
-    display: none;
-
-    pointer-events: none;
-
-    visibility: hidden;
-  }
-
-  .nav-open .main-nav-list {
     display: flex;
     position: absolute;
     left: 0;
@@ -124,10 +115,25 @@ USE REM AND EM
 
     font-size: 3.6rem;
     background-color: rgba(255, 255, 255, 0.93);
+    opacity: 0;
 
-    pointer-events: all;
+    pointer-events: none;
 
+    visibility: hidden;
+
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-open .main-nav-list {
+    transform: translateX(0);
+    opacity: 1;
+    overflow: hidden;
+    /* transition: all 0.4ms; */
+
+    pointer-events: auto;
     visibility: visible;
+    overflow-y: hidden;
   }
 
   /******************************/

@@ -41,9 +41,16 @@ Medium: 11px
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+  overflow-x: hidden;
+  color: #555;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 
 /******************************/
