@@ -250,7 +250,7 @@ html {
 .featured-logo {
   filter: brightness(0);
   opacity: 70%;
-  max-height: 3.2rem;
+  height: 3.2rem;
   /* max-width: 100%; */
 }
 
@@ -492,7 +492,7 @@ html {
   display: grid;
   grid-template-columns: 2fr 1.1fr;
 
-  width: 65%;
+  width: 70%;
   /* height: 50rem; */
   border-radius: 11px;
   background-image: linear-gradient(to right bottom, #eb984e, #cf711f);

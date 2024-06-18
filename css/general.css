@@ -123,6 +123,18 @@
   color: #2e1907;
 }
 
+.btn--mobile-nav {
+  display: none;
+}
+
+.mobile-nav-icon[name="menu-outline"] {
+  display: block;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
+}
+
 .tag {
   font-size: 1.2rem;
   text-transform: uppercase;
