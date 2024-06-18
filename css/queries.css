@@ -365,6 +365,19 @@ USE REM AND EM
   }
 }
 
+/******************************/
+/* PHONES: UPTO 368 */
+/******************************/
+@media (max-width: 23em) {
+  html {
+    font-size: 25%;
+  }
+
+  /* .featured-logo {
+    height: 1.6rem;
+  } */
+}
+
 /* 
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
