@@ -11,6 +11,7 @@ USE REM AND EM
 
   #input-where {
     font-size: 1.6rem;
+    color: #333;
   }
 }
 
@@ -371,6 +372,10 @@ USE REM AND EM
 @media (max-width: 23em) {
   html {
     font-size: 25%;
+  }
+
+  .logo {
+    height: 2.4rem;
   }
 
   /* .featured-logo {
