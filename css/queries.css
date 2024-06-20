@@ -367,7 +367,7 @@ USE REM AND EM
 }
 
 /******************************/
-/* PHONES: UPTO 368 */
+/* SMALL PHONES: UPTO 368 */
 /******************************/
 @media (max-width: 23em) {
   html {
@@ -378,9 +378,19 @@ USE REM AND EM
     height: 2.4rem;
   }
 
-  /* .featured-logo {
+  .featured-logo {
+    height: 2.4rem;
+  }
+}
+
+/******************************/
+/*VERY SMALL PHONES: UPTO 288PX*/
+/******************************/
+
+@media (max-width: 18em) {
+  .featured-logo {
     height: 1.6rem;
-  } */
+  }
 }
 
 /* 
