@@ -388,8 +388,16 @@ USE REM AND EM
 /******************************/
 
 @media (max-width: 18em) {
-  .featured-logo {
+  /* .featured-logo {
     height: 1.6rem;
+  } */
+
+  .featured-logo {
+    max-width: 100%;
+  }
+
+  .featured-logos {
+    width: 100%;
   }
 }
 
