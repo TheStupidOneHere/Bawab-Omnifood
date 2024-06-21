@@ -32,10 +32,12 @@ linkEl.forEach(function (link) {
 
 const bodyEl = document.querySelector("body");
 const sectionHeroEl = document.querySelector(".section-hero");
+
+const headerHeight = "-" + headerEl.offsetHeight + "px";
+
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
 
     if (ent.isIntersecting == false) {
       bodyEl.classList.add("sticky");
@@ -49,7 +51,7 @@ const obs = new IntersectionObserver(
     // In the viewport
     root: null,
     threshold: 0,
-    rootMargin: "-80px",
+    rootMargin: headerHeight,
   }
 );
 obs.observe(sectionHeroEl);
