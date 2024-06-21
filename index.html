@@ -6,7 +6,14 @@
       name="viewport"
       content="width=device-width, minimum-scale=1.0, user-scalable=no"
     />
-    <title>Omnifood</title>
+    <meta
+      name="description"
+      content="The smart 365-days-per-year food subscription that will make you
+    eat healthy again. Tailored to your personal tastes and
+    nutritional needs."
+    />
+
+    <title>Omnifood &mdash; Never cook again!</title>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
@@ -16,8 +23,18 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="icon" href="img/favicon-sm.png" />
+    <link rel="apple-touch-icon" href="img/favicon-180x180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
     <script defer src="js/omnifood.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
   </head>
+
   <body>
     <div class="site">
       <header class="header">
@@ -94,11 +111,15 @@
               </div>
             </div>
             <div class="hero-img-box">
-              <img
-                class="hero-img"
-                src="img/hero.png"
-                alt="Woman eating food, Food in containers, Food in pans"
-              />
+              <picture>
+                <source srcset="img/hero-min.webp" type="image/webp" />
+                <source srcset="img/hero-min.png" type="image/png" />
+                <img
+                  class="hero-img"
+                  src="img/hero-min.png"
+                  alt="Woman eating food, Food in containers, Food in pans"
+                />
+              </picture>
             </div>
           </div>
         </section>
@@ -108,8 +129,7 @@
           <div class="featured-logos">
             <img
               src="img/logos/techcrunch.png"
-              alt="techcrunch
-        Logo"
+              alt="techcrunch Logo"
               class="featured-logo"
             />
             <img
@@ -585,7 +605,7 @@
                 first meal is on us!
               </p>
 
-              <form class="form" action="#">
+              <form class="form" name="sign-up" netlify>
                 <div class="cta-input-field">
                   <label for="input-name" class="cta-label">Your Name</label>
                   <input
@@ -593,6 +613,7 @@
                     class="cta-input"
                     placeholder="John Smith"
                     type="text"
+                    name="full-name"
                     required
                   />
                 </div>
@@ -603,6 +624,7 @@
                     class="cta-input"
                     placeholder="john@omnifood.com"
                     type="email"
+                    name="email"
                     required
                   />
                 </div>
@@ -610,7 +632,12 @@
                   <label for="input-where" class="cta-label"
                     >How did you hear about us?</label
                   >
-                  <select name="where" id="input-where" class="cta-input">
+                  <select
+                    name="where"
+                    id="input-where"
+                    class="cta-input"
+                    name="where-you-found-us"
+                  >
                     <option value="">Please select an option</option>
                     <option value="friends">Friends and family</option>
                     <option value="online">Online Advertisement</option>
