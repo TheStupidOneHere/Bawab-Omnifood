@@ -129,10 +129,12 @@
 
 .mobile-nav-icon[name="menu-outline"] {
   display: block;
+  color: #333;
 }
 
 .mobile-nav-icon[name="close-outline"] {
   display: none;
+  color: #333;
 }
 
 .tag {

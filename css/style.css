@@ -42,15 +42,21 @@ Medium: 11px
 }
 
 body {
-  position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden !important; */
   color: #555;
+  position: relative;
 }
 
 html {
   font-size: 62.5%;
   font-family: "Rubik", sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden !important; */
+}
+
+.site {
+  position: relative;
+  width: 100vw;
+  overflow: hidden !important;
 }
 
 /******************************/
@@ -162,6 +168,20 @@ html {
 .meals-delivered span {
   font-weight: 600;
   color: #cf711f;
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.08);
+}
+
+.sticky .section-hero {
+  margin-top: 8rem;
 }
 
 /******************************/

@@ -115,7 +115,8 @@ USE REM AND EM
     justify-content: center;
 
     font-size: 3.6rem;
-    background-color: rgba(255, 255, 255, 0.93);
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
     opacity: 0;
 
     pointer-events: none;
@@ -129,20 +130,34 @@ USE REM AND EM
   .nav-open .main-nav-list {
     transform: translateX(0);
     opacity: 1;
-    overflow: hidden;
     /* transition: all 0.4ms; */
 
     pointer-events: auto;
     visibility: visible;
-    overflow-y: hidden;
   }
 
   /******************************/
   /* Featured */
   /******************************/
 
+  .featured-logos {
+    padding: 1.6rem;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 2.4rem;
+    justify-items: center;
+  }
+
   .featured-logo {
-    height: 2.4rem;
+    height: 4.8rem;
+    grid-column: span 2;
+  }
+
+  .featured-logos .featured-logo:nth-child(4),
+  .featured-logos .featured-logo:nth-child(5) {
+    grid-row: 2;
+    grid-column: span 3;
   }
 
   /******************************/
@@ -252,7 +267,7 @@ USE REM AND EM
   /******************************/
 
   html {
-    font-size: 31.25%;
+    font-size: 33%;
   }
 
   .bottom-margin-big {
@@ -271,6 +286,19 @@ USE REM AND EM
     font-size: 2.4rem;
   } */
 
+  .logo {
+    height: 2.4rem;
+  }
+
+  /******************************/
+  /* Hero */
+  /******************************/
+
+  .hero .btn--cta {
+    margin-bottom: 1.6rem;
+    margin: 2.4rem;
+  }
+
   /******************************/
   /* Featured */
   /******************************/
@@ -280,7 +308,7 @@ USE REM AND EM
   }
 
   .featured-logo {
-    height: 2.4rem;
+    height: 2rem;
   }
 
   /******************************/
@@ -380,24 +408,6 @@ USE REM AND EM
 
   .featured-logo {
     height: 2.4rem;
-  }
-}
-
-/******************************/
-/*VERY SMALL PHONES: UPTO 288PX*/
-/******************************/
-
-@media (max-width: 18em) {
-  /* .featured-logo {
-    height: 1.6rem;
-  } */
-
-  .featured-logo {
-    max-width: 100%;
-  }
-
-  .featured-logos {
-    width: 100%;
   }
 }
 
