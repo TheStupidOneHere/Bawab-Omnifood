@@ -607,37 +607,37 @@
 
               <form class="form" name="sign-up" netlify>
                 <div class="cta-input-field">
-                  <label for="input-name" class="cta-label">Your Name</label>
+                  <label for="input-name" class="cta-label" name="full-name"
+                    >Your Name</label
+                  >
                   <input
                     id="input-name"
                     class="cta-input"
                     placeholder="John Smith"
                     type="text"
-                    name="full-name"
                     required
                   />
                 </div>
                 <div class="cta-input-field">
-                  <label for="input-email" class="cta-label">Your Email</label>
+                  <label for="input-email" class="cta-label" name="email"
+                    >Your Email</label
+                  >
                   <input
                     id="input-email"
                     class="cta-input"
                     placeholder="john@omnifood.com"
                     type="email"
-                    name="email"
                     required
                   />
                 </div>
                 <div class="cta-input-field">
-                  <label for="input-where" class="cta-label"
+                  <label
+                    for="input-where"
+                    class="cta-label"
+                    name="where-you-found-us"
                     >How did you hear about us?</label
                   >
-                  <select
-                    name="where"
-                    id="input-where"
-                    class="cta-input"
-                    name="where-you-found-us"
-                  >
+                  <select name="where" id="input-where" class="cta-input">
                     <option value="">Please select an option</option>
                     <option value="friends">Friends and family</option>
                     <option value="online">Online Advertisement</option>
